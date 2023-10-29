@@ -1,6 +1,6 @@
 ---
 layout: poi
-wikidatum: Q121378
+wikidatum: Q7186
 title:  Κέρκυρα
 ---
 
