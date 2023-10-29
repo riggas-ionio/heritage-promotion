@@ -1,0 +1,7 @@
+---
+layout: poi
+wikidatum: Q22025388
+title:  Rosa Parks
+---
+
+Sample text 
