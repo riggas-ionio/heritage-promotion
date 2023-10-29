@@ -1,0 +1,7 @@
+---
+layout: poi
+wikidatum: Q5588
+title:  Frida Kahlo
+---
+
+Sample text 
