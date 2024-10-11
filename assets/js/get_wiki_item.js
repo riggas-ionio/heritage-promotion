@@ -1,5 +1,5 @@
 console.log("Fetch: ", wikidatum);
-
+  
 function get_wikidatum(id){
     console.log('Getting from wikidata entity: ', id);
     // WikiMedia API based:

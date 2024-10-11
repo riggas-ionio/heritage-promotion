@@ -12,3 +12,4 @@ permalink: /pois/
     </li>
   {% endfor %}
 </ul>
+
