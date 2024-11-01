@@ -1,7 +1,7 @@
 .site-title {
   display: inline-flex;
   align-items: center;
-  background-image: url('{{ "/assets/di.png" | relative_url }}');
+  background-image: url("/heritage-promotion/assets/di.png");
   background-size: 20px 20px; /* Adjust size as needed */
   background-repeat: no-repeat;
   background-position: left center;
