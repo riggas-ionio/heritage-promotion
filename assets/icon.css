@@ -1,0 +1,9 @@
+.site-title {
+  display: inline-flex;
+  align-items: center;
+  background-image: url('{{ "/assets/di.png" | relative_url }}');
+  background-size: 20px 20px; /* Adjust size as needed */
+  background-repeat: no-repeat;
+  background-position: left center;
+  padding-left: 28px; /* Adds space for the icon */
+}
