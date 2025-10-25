@@ -1,48 +1,102 @@
 ---
 layout: page
-title: Δοκιμή Wikidata
-permalink: /wikidata-test/
+title: Περιεχόμενο Q136545857
+permalink: /wikidata-q136545857/
 ---
 
-# 🔎 Δεδομένα από το Wikidata (Q136545857)
+# 🔎 Δεδομένα από Wikidata (QID: Q136545857)
 
-Το περιεχόμενο που ακολουθεί ανακτάται απευθείας από το Wikidata χρησιμοποιώντας JavaScript.
+<p>Αυτή η σελίδα εμφανίζει δυναμικά όλες τις Δηλώσεις (Claims) που είναι καταχωρημένες για το αντικείμενο **Q136545857** στο Wikidata.</p>
 
-<div id="wikidata-content" style="border: 1px solid #ccc; padding: 15px; background-color: #f9f9f9;">
+<div id="wikidata-full-content" style="border: 2px solid #CC0033; padding: 20px; background-color: #FEF0F0; border-radius: 8px;">
   Φόρτωση δεδομένων...
 </div>
 
 <script>
-// Το QID του αντικειμένου που θέλουμε να ανακτήσουμε
-const QID = 'Q136545857';
+// QID: Το συγκεκριμένο αντικείμενο που ζητήθηκε
+const QID = 'Q136545857'; 
 
-// Διεύθυνση API του Wikidata (έχει CORS enabled)
-const WIKIDATA_API_URL = `https://www.wikidata.org/w/api.php?action=wbgetentities&ids=${QID}&props=labels|descriptions&languages=el|en&format=json&origin=*`;
+// URL για ανάκτηση Labels, Descriptions και Claims
+const WIKIDATA_API_URL = `https://www.wikidata.org/w/api.php?action=wbgetentities&ids=${QID}&props=labels|descriptions|claims&languages=el|en&format=json&origin=*`;
 
-const contentDiv = document.getElementById('wikidata-content');
+const contentDiv = document.getElementById('wikidata-full-content');
+
+// Βοηθητική συνάρτηση για την εξαγωγή της τιμής από το JSON
+function getClaimValue(claim) {
+    if (!claim.mainsnak || !claim.mainsnak.datavalue) {
+        return '— Άγνωστη Τιμή —';
+    }
+    const dataValue = claim.mainsnak.datavalue;
+    const type = dataValue.type;
+
+    switch (type) {
+        case 'wikibase-entityid':
+            // Για αντικείμενα (π.χ., QID), επιστρέφουμε τον ID
+            return dataValue.value.id;
+        case 'time':
+            // Για ημερομηνίες, μορφοποιούμε
+            return dataValue.value.time.substring(1, 11);
+        case 'string':
+        case 'external-id':
+            return dataValue.value;
+        case 'monolingualtext':
+            return dataValue.value.text + ` (${dataValue.value.language})`;
+        case 'quantity':
+            return dataValue.value.amount + ' ' + (dataValue.value.unit === '1' ? '' : dataValue.value.unit);
+        default:
+            return `[Τύπος: ${type}]`;
+    }
+}
 
 fetch(WIKIDATA_API_URL)
   .then(response => response.json())
   .then(data => {
-    // Έλεγχος αν υπάρχουν δεδομένα για το QID
-    if (data.entities && data.entities[QID]) {
-      const entity = data.entities[QID];
+    const entity = data.entities[QID];
 
-      // Ανάκτηση τίτλου (Label)
-      const label_el = entity.labels && entity.labels.el ? entity.labels.el.value : entity.labels.en ? entity.labels.en.value : 'Χωρίς Τίτλο (Label)';
-      
-      // Ανάκτηση Περιγραφής (Description)
-      const description_el = entity.descriptions && entity.descriptions.el ? entity.descriptions.el.value : entity.descriptions.en ? entity.descriptions.en.value : 'Δεν βρέθηκε περιγραφή.';
-
-      // Δημιουργία HTML περιεχομένου
-      contentDiv.innerHTML = `
-        <h3>Τίτλος (Ελληνικά): ${label_el}</h3>
-        <p><strong>QID:</strong> ${QID}</p>
-        <p><strong>Περιγραφή:</strong> ${description_el}</p>
-      `;
-    } else {
-      contentDiv.innerHTML = 'Δεν βρέθηκαν δεδομένα για αυτό το QID.';
+    if (!entity || entity.missing === "") {
+        contentDiv.innerHTML = `<h3>Δεν βρέθηκαν δεδομένα για το QID: ${QID}</h3>`;
+        return;
     }
+
+    // 1. Βασικές πληροφορίες (Labels / Descriptions)
+    // Χρησιμοποιούμε fallback αν δεν υπάρχουν Ελληνικά ή Αγγλικά
+    const label_el = (entity.labels && entity.labels.el) ? entity.labels.el.value : (entity.labels && entity.labels.en) ? entity.labels.en.value : 'Χωρίς Τίτλο';
+    const description_el = (entity.descriptions && entity.descriptions.el) ? entity.descriptions.el.value : (entity.descriptions && entity.descriptions.en) ? entity.descriptions.en.value : 'Χωρίς Περιγραφή';
+
+    let html = `<h2>${label_el}</h2>`;
+    html += `<p><strong>Περιγραφή:</strong> ${description_el}</p>`;
+    html += `<p><a href="https://www.wikidata.org/wiki/${QID}" target="_blank">Προβολή στο Wikidata</a></p><hr>`;
+    
+    // 2. Πλήρης Λίστα Δηλώσεων (Claims)
+    html += '<h3>Όλες οι Δηλώσεις (Claims):</h3><ul style="list-style-type: none; padding-left: 0;">';
+    
+    const claims = entity.claims;
+    let claimsFound = false;
+
+    for (const propertyId in claims) {
+      if (claims.hasOwnProperty(propertyId)) {
+        claimsFound = true;
+        const claimsList = claims[propertyId];
+        
+        claimsList.forEach(claim => {
+            const value = getClaimValue(claim);
+            // Εμφανίζουμε την ιδιότητα (P-number) και την ακατέργαστη τιμή (Value)
+            html += `<li style="margin-bottom: 5px;">
+                        <strong><a href="https://www.wikidata.org/wiki/${propertyId}" target="_blank">${propertyId}</a>:</strong> ${value}
+                    </li>`;
+        });
+      }
+    }
+    
+    if (!claimsFound) {
+        html += '<li>Δεν βρέθηκαν δηλώσεις (Claims) για αυτό το αντικείμενο.</li>';
+    }
+
+
+    html += '</ul>';
+
+    contentDiv.innerHTML = html;
+
   })
   .catch(error => {
     console.error('Σφάλμα φόρτωσης Wikidata:', error);
