@@ -26,7 +26,7 @@ github_username: pajoanna-hub
 
 # Build settings
 markdown: kramdown
-theme: reverie
+theme: minima
 plugins:
   - jekyll-feed
 
