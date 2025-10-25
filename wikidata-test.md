@@ -6,7 +6,7 @@ permalink: /wikidata-Q14201950/
 
 # 🔎 Δεδομένα από Wikidata (QID: Q14201950)
 
-<p>Αυτή η σελίδα εμφανίζει δυναμικά όλες τις Δηλώσεις (Claims) που είναι καταχωρημένες για το αντικείμενο **Q136545857** στο Wikidata.</p>
+<p>Αυτή η σελίδα εμφανίζει δυναμικά όλες τις Δηλώσεις (Claims) που είναι καταχωρημένες για το αντικείμενο **Q14201950** στο Wikidata.</p>
 
 <div id="wikidata-full-content" style="border: 2px solid #CC0033; padding: 20px; background-color: #FEF0F0; border-radius: 8px;">
   Φόρτωση δεδομένων...
@@ -14,7 +14,7 @@ permalink: /wikidata-Q14201950/
 
 <script>
 // QID: Το συγκεκριμένο αντικείμενο που ζητήθηκε
-const QID = 'Q136545857'; 
+const QID = 'Q14201950'; 
 
 // URL για ανάκτηση Labels, Descriptions και Claims
 const WIKIDATA_API_URL = `https://www.wikidata.org/w/api.php?action=wbgetentities&ids=${QID}&props=labels|descriptions|claims&languages=el|en&format=json&origin=*`;
