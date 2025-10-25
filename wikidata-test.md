@@ -1,20 +1,20 @@
 ---
 layout: page
-title: Περιεχόμενο Q14201950
-permalink: /wikidata-Q14201950/
+title: Πολύγυρος Χαλκιδικής (Wikidata)
+permalink: /poligiros/
 ---
 
-# 🔎 Δεδομένα από Wikidata (QID: Q14201950)
+# 🏙️ Δεδομένα από Wikidata: Πολύγυρος Χαλκιδικής (Q987440)
 
-<p>Αυτή η σελίδα εμφανίζει δυναμικά όλες τις Δηλώσεις (Claims) που είναι καταχωρημένες για το αντικείμενο **Q14201950** στο Wikidata.</p>
+<p>Αυτή η σελίδα εμφανίζει δυναμικά όλες τις Δηλώσεις (Claims) που είναι καταχωρημένες για τον **Πολύγυρο, την πρωτεύουσα της Χαλκιδικής**, στο Wikidata.</p>
 
-<div id="wikidata-full-content" style="border: 2px solid #CC0033; padding: 20px; background-color: #FEF0F0; border-radius: 8px;">
+<div id="wikidata-full-content" style="border: 2px solid #009688; padding: 20px; background-color: #E0F2F1; border-radius: 8px;">
   Φόρτωση δεδομένων...
 </div>
 
 <script>
-// QID: Το συγκεκριμένο αντικείμενο που ζητήθηκε
-const QID = 'Q14201950'; 
+// QID: Πολύγυρος Χαλκιδικής
+const QID = 'Q987440'; 
 
 // URL για ανάκτηση Labels, Descriptions και Claims
 const WIKIDATA_API_URL = `https://www.wikidata.org/w/api.php?action=wbgetentities&ids=${QID}&props=labels|descriptions|claims&languages=el|en&format=json&origin=*`;
@@ -59,7 +59,6 @@ fetch(WIKIDATA_API_URL)
     }
 
     // 1. Βασικές πληροφορίες (Labels / Descriptions)
-    // Χρησιμοποιούμε fallback αν δεν υπάρχουν Ελληνικά ή Αγγλικά
     const label_el = (entity.labels && entity.labels.el) ? entity.labels.el.value : (entity.labels && entity.labels.en) ? entity.labels.en.value : 'Χωρίς Τίτλο';
     const description_el = (entity.descriptions && entity.descriptions.el) ? entity.descriptions.el.value : (entity.descriptions && entity.descriptions.en) ? entity.descriptions.en.value : 'Χωρίς Περιγραφή';
 
@@ -91,7 +90,6 @@ fetch(WIKIDATA_API_URL)
     if (!claimsFound) {
         html += '<li>Δεν βρέθηκαν δηλώσεις (Claims) για αυτό το αντικείμενο.</li>';
     }
-
 
     html += '</ul>';
 
