@@ -2,40 +2,7 @@
 layout: poi
 wikidatum: Q113041921
 title:  Fotini Tsalikoglou
+---
 
 Φωτεινή Τσαλίκογλου
 
-
-layout: poi
-wikidatum: Q136506564
-title:  Vasilis Chouliaras
-
-Βασίλης Χουλιαράς
-
-
-layout: poi
-wikidatum: Q136557095
-title:  Giorgos Gotis
-
-Γιώργος Γώτης
-
-layout: poi
-wikidatum: Q136649580
-title:  Achilleas III
-
-Αχιλλέας ΙΙΙ
-
-
-layout: poi
-wikidatum: Q109330925
-title:  Tatiana Averof 
-
-Τατιάνα Αβερωφ-Ιωάννου
-
-
-layout: poi
-wikidatum: Q111302535
-title:  Giannis Doukas 
-
-Γιάννης Δούκας
----
