@@ -1,0 +1,6 @@
+---
+layout: poi
+wikidatum: Q136506564
+title:  Vasilis Chouliaras
+---
+Βασίλης Χουλιαράς
