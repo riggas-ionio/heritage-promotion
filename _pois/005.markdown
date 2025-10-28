@@ -1,0 +1,7 @@
+---
+layout: poi
+wikidatum: Q109330925
+title: Tatiana Averof
+
+---
+Τατιάνα Αβερωφ-Ιωάννου
