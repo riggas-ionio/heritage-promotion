@@ -1,13 +1,13 @@
 console.log("Fetch: ", wikidatum);
 
-function get_wikidatum(id){
-    console.log('Getting from wikidata entity: ', id);
+function get_wikidatum(Q136545857){
+    console.log('Getting from wikidata entity: ', Q136545857);
     // WikiMedia API based:
     let url = `https://www.wikidata.org/w/api.php?action=wbgetentities&ids=${id}&format=json&languages=en|el&origin=*`;
     // WikiData URI based:
     // let url = `https://www.wikidata.org/wiki/Special:EntityData/${id}.json`;
-    console.log('API endpoint:', url);
-    var jqxhr = $.getJSON( url, function(data) {
+    console.log('API endpoint:', https://www.wikidata.org/wiki/Q136545857);
+    var jqxhr = $.getJSON( https://www.wikidata.org/wiki/Q136545857, function(data) {
           //console.log( "Success; entities returned: ", Object.keys(data).length );
 
           let description = get_json_value(['entities',id,'descriptions','el','value'], data);
