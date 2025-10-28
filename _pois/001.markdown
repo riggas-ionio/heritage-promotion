@@ -18,4 +18,24 @@ wikidatum: Q136557095
 title:  Giorgos Gotis
 
 Γιώργος Γώτης
+
+layout: poi
+wikidatum: Q136649580
+title:  Achilleas III
+
+Αχιλλέας ΙΙΙ
+
+
+layout: poi
+wikidatum: Q109330925
+title:  Tatiana Averof 
+
+Τατιάνα Αβερωφ-Ιωάννου
+
+
+layout: poi
+wikidatum: Q111302535
+title:  Giannis Doukas 
+
+Γιάννης Δούκας
 ---
