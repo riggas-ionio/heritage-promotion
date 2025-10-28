@@ -2,19 +2,19 @@
 layout: poi
 wikidatum: Q113041921
 title:  Fotini Tsalikoglou
----
+
 
 Φωτεινή Τσαλίκογλου
 
----
+
 layout: poi
 wikidatum: Q136506564
 title:  Vasilis Chouliaras
----
+
 
 Βασίλης Χουλιαράς
 
----
+
 layout: poi
 wikidatum: Q136557095
 title:  Giorgos Gotis
