@@ -20,7 +20,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   στα πλαίσια εργασίας του μαθήματος Εργαλεία Προβολής Τουριστικού & Πολιτιστικού Προϊόντος
   του ΠΜΣ "Ψηφιακές Εφαρμογές & Καινοτομία" του Ιονίου Πανεπιστημίου.
 baseurl: "/heritage-promotion" # the subpath of your site, e.g. /blog
-url: "https://pajoanna-hub.github.io", e.g. http://example.com
+url: "https://pajoanna-hub.github.io" e.g. http://example.com
 # twitter_username: jekyllrb
 github_username: pajoanna-hub
 
