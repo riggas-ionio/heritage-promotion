@@ -19,7 +19,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   Ο ιστοχώρος αυτός αναπτύχτηκε από τους Ιωάννη Χρήστου και Ιωάννη Τσαλαφούτα
   στα πλαίσια εργασίας του μαθήματος Εργαλεία Προβολής Τουριστικού και Πολιτιστικού Προϊόντος
   του ΠΜΣ Ψηφιακές Εφαρμογές και την Καινοτομία του Ιονίου Πανεπιστημίου.
-baseurl: "heritage-promotion" # the subpath of your site, e.g. /blog
+baseurl: "GreekWriters" # the subpath of your site, e.g. /blog
 url: "yannakai.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 # twitter_username: jekyllrb
 github_username:  Yannakai
