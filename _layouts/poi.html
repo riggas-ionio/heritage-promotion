@@ -2,26 +2,55 @@
 layout: default
 load_leaflet: 1
 ---
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ page.title }} | {{ site.title }}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  <style>
+    body {
+      font-family: "Noto Sans", "Roboto", sans-serif;
+      background: #fafafa;
+      color: #222;
+      margin: 0;
+      line-height: 1.6;
+    }
 
-<h1 style="float:right; font-size:64pt; color:#f1f1f1">{{page.title}}</h1>
-<h2 id="wikidata_title"></h2>
-<h3 id="wikidata_descr"></h3>
-<a id="wikidata_href" target="_blank"><img src = "https://upload.wikimedia.org/wikipedia/commons/archive/5/5a/20211013163259%21Wikipedia%27s_W.svg" alt="Wikipedia link" height="20px"/> <span id="wikipedia_title"> </a>
-<p id="wikidata_location"></p>
+    header {
+      background: #004d80;
+      color: white;
+      text-align: center;
+      padding: 1rem 0;
+    }
 
-<img id="wikidata_img" style="width:100%; padding-bottom:5px;" />
+    main {
+      max-width: 800px;
+      margin: 2rem auto;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      padding: 2rem;
+    }
 
-<div id="map" style="height: 180px; width:100%; background-color:lightblue"></div>
+    h1 {
+      margin-top: 0;
+      color: #004d80;
+    }
 
-{{ content }}
+    .wikidata {
+      background: #e9f3fb;
+      border-left: 4px solid #004d80;
+      padding: 1rem;
+      margin-top: 1.5rem;
+      font-size: 0.9rem;
+      <img src="https://upload.wikimedia.org/wikipedia/commons/4/41/Wikidata_Stamp_Rec_Light.svg" style="float:right; width:100px" />
+    }
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/4/41/Wikidata_Stamp_Rec_Light.svg" style="float:right; width:100px" />
+    footer {
+      text-align: center;
+      padding: 1rem;
+      color: #777;
+      font-size: 0.8rem;
 
-<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-<script>var wikidatum = '{{page.wikidatum}}'</script>
-<script src="{{ '/assets/js/get_wiki_item.js' | relative_url }}"></script>
-
-<script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
-   integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
-   crossorigin=""></script>
-<script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/Leaflet.fullscreen.min.js'></script>
