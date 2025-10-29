@@ -1,7 +1,8 @@
 ---
 layout: poi
-wikidatum: Q121378
-title:  Κέρκυρα
+wikidatum: Q113041921
+title:  Fotini Tsalikoglou
 ---
 
-Sample text
+Φωτεινή Τσαλίκογλου
+

@@ -14,26 +14,27 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: Ιστοχώρος προβολής πολιτιστικού περιεχομένου
-# email: your-email@example.com
+# email: inf.dig2411@ionio.gr
 description: >- # this means to ignore newlines until "baseurl:"
-  Ο ιστοχώρος αυτός αναπτύχτηκε από τους ........................
-  στα πλαίσια εργασίας του μαθήματος ............................
-  του ΠΜΣ .................. του Ιονίου Πανεπιστημίου.
-baseurl: "heritage-promotion" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+  Ο ιστοχώρος αυτός αναπτύχτηκε από τους Ιωάννη Χρήστου και Ιωάννη Τσαλαφούτα
+  στα πλαίσια εργασίας του μαθήματος Εργαλεία Προβολής Τουριστικού και Πολιτιστικού Προϊόντος
+  του ΠΜΣ Ψηφιακές Εφαρμογές και την Καινοτομία του Ιονίου Πανεπιστημίου.
+baseurl: "GreekWriters" # the subpath of your site, e.g. /blog
+url: "yannakai.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 # twitter_username: jekyllrb
-github_username:  riggas-ionio
+github_username:  Yannakai
 
 # Build settings
 markdown: kramdown
-theme: minima
+theme: modernist
 plugins:
   - jekyll-feed
 
 collections:
   pois:
     output: true
-
+      permalink: /pois/:title/
+      
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.

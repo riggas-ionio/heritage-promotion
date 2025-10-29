@@ -1,0 +1,7 @@
+---
+layout: poi
+wikidatum: Q136557095
+title: Giorgos Gotis
+
+---
+Γιώργος Γώτης

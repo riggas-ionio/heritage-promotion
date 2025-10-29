@@ -1,0 +1,7 @@
+---
+layout: poi 
+wikidatum: Q111302535 
+title: Giannis Doukas 
+
+---
+Γιάννης Δούκας 
