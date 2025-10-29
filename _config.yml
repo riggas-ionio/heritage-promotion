@@ -26,7 +26,7 @@ github_username:  Yannakai
 
 # Build settings
 markdown: kramdown
-theme: minima
+theme: modernist
 plugins:
   - jekyll-feed
 
